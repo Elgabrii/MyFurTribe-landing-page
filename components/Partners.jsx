@@ -4,13 +4,6 @@ import Typography from '@mui/material/Typography';
 import Grid from '@mui/material/Grid';
 import Image from 'next/image'
 import styled from '@emotion/styled';
-// const PartnersRow = styled.div`
-//   display: flex;
-//   flex-direction: row;
-//   justify-content: space-around;
-//   align-items: center;
-//   padding: 0px 48px
-// `
 
 const Base = styled.div`
   position:relative;
@@ -41,19 +34,19 @@ const Partners = () => (
     <Container >
       <ImageContainer>
         {/* hello */}
-        <img width="100%" src='/amazon.png' alt='amazon'/>
+        <Image width="100%" height='40px' src='/amazon.png' alt='amazon'/>
       </ImageContainer>
       <ImageContainer>
         {/* tesss */}
-        <img width="100%" src='/walmart.png' alt='walmart' />
+        <Image width="100%" height='40px' src='/walmart.png' alt='walmart' />
       </ImageContainer>
       <ImageContainer>
         {/* owaww */}
-        <img width="100%" src='/rawfeedmiami.png' alt='rawfeedmiami' />
+        <Image width="100%" height='100px' src='/rawfeedmiami.png' alt='rawfeedmiami' />
       </ImageContainer>
       <ImageContainer>
         {/* bla */}
-        <img width="100%" src='/HareToday.png' alt='haretoday' />
+        <Image width="100%" height='80px' src='/HareToday.png' alt='haretoday' />
       </ImageContainer>
     </Container>
   </Base>
