@@ -6,7 +6,7 @@ const Statistics = () => (
     <Box width='100%' display='flex' pt={3} alignItems='center'>
       <Box flexGrow={1} display='flex' flexDirection='column' mr={5}>
         <Typography variant='h4' color='primary' mb={4}>
-          MyFurTribe's Mobile App
+          MyFurTribe Mobile App
         </Typography>
         <iframe src="https://www.youtube.com/embed/HJ8wydj3m6s" height={250} ></iframe>
       </Box>

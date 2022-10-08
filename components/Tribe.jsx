@@ -46,7 +46,7 @@ const Tribe = () => (
       <Typography sx={{padding: '30px 112px'}} variant='h4'> Homemade Feeding <br /> Done Right.</Typography>
       <Box display='flex' flexDirection='row' width='100%' alignItems='center' px={10}>
         <Box flexBasis={0} flexGrow={0.5} variant='p'>
-          MyFurTribe’s “Nutrition Pro” is veterinary nutritionist approved. In short, any recipe that you create using our app will be as nutritionally complete & balanced as anything you're going to find at the pet store.
+          MyFurTribe’s “Nutrition Pro” is veterinary nutritionist approved. In short, any recipe that you create using our app will be as nutritionally complete & balanced as anything you are going to find at the pet store.
         </Box>
         <Box flexGrow={1} display='flex' >
           <Box flexGrow={1} height='360px' sx={{ position: 'relative' }}>
