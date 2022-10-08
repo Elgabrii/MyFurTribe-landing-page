@@ -4,6 +4,7 @@ import Tribe from '../components/Tribe';
 import styled from '@emotion/styled';
 import NavBar from '../components/Navbar';
 import Features from '../components/Features';
+import Statistics from '../components/Statistics';
 // import bg from '../public/image14.png '
 const Img = styled.div`
   background-image: linear-gradient(to left, rgba(245, 246, 252, 0), rgba(252, 252, 252, 1)),
@@ -22,6 +23,7 @@ export default function Home() {
       <Partners />
       <Tribe />
       <Features />
+      <Statistics />
     </Box>
   </Box>
 }
