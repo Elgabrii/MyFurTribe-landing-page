@@ -5,7 +5,7 @@ const Statistics = () => (
   <Box display='flex' flexDirection='column' width='100%' px={10} mb={3}>
     <Box width='100%' display='flex' pt={3} alignItems='center'>
       <Box flexGrow={1} display='flex' flexDirection='column' mr={5}>
-        <Typography variant='h4' color='primary' mb={4}>
+        <Typography variant='h4' color='primary' mb={4} align='center' fontWeight='500'>
           MyFurTribe Mobile App
         </Typography>
         <iframe src="https://www.youtube.com/embed/HJ8wydj3m6s" height={250} ></iframe>
