@@ -14,8 +14,21 @@ const clientSideEmotionCache = createEmotionCache();
 
 
 export default function MyApp(props) {
+  const [documentLoaded, setDocumentLoaded] = React.useState(false)
+
+  React.useEffect(() => {
+    setDocumentLoaded(true)
+    // let isDomLoaded = true
+    // if(isDomLoaded) {
+    // }
+    
+    // return () => {
+    //  isDomLoaded = false
+    // };
+  }, []);
+
   const { Component, emotionCache = clientSideEmotionCache, pageProps } = props;
-  return (
+  return ( documentLoaded ?
     <CacheProvider value={emotionCache}>
       <Head>
         <meta name="viewport" content="initial-scale=1, width=device-width" />
@@ -26,6 +39,8 @@ export default function MyApp(props) {
         <Component {...pageProps} />
       </ThemeProvider>
     </CacheProvider>
+    :
+    <h1>loading...</h1>
   );
 }
 
