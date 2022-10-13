@@ -36,7 +36,7 @@ const TribeMobile = () => (
           Done Right.
         </Typography>
         <Typography color='white' variant='body1' pt={2} mb={3} fontWeight={500}>
-          MyFurTribe’s “Nutrition Pro” is veterinary nutritionist approved. In short, any recipe that you create using our app will be as nutritionally complete & balanced as anything you're going to find at the pet store.
+          MyFurTribe’s “Nutrition Pro” is veterinary nutritionist approved. In short, any recipe that you create using our app will be as nutritionally complete & balanced as anything you&apos;re going to find at the pet store.
         </Typography>
         <Button 
           variant='contained' 
