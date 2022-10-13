@@ -2,6 +2,7 @@
 import React from 'react';
 import Box from '@mui/material/Box';
 import Link from '@mui/material/Link';
+import NextLink from 'next/link'
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Button';
 import Image from 'next/image'
@@ -24,10 +25,18 @@ const NavBar = (props) => {
       <Image src='/tribelogo.png' width='210px' height='40px' alt='logo' />
     </Box>
     <Box direction="row" justifyContent='space-around' alignSelf='center' >
-      <Link component='text' fontWeight='500' pr={8} underline='none' sx={{ cursor: 'pointer', color: 'black', '&: hover': { color: theme?.palette?.primary?.main} }} variant='body'>Pet Parent</Link>
-      <Link component='text' fontWeight='500' pr={8} underline='none' sx={{ cursor: 'pointer', color: 'black', '&: hover': { color: theme?.palette?.primary?.main} }} variant='body'>Veterinarians</Link>
-      <Link component='text' fontWeight='500' pr={8} underline='none' sx={{ cursor: 'pointer', color: 'black', '&: hover': { color: theme?.palette?.primary?.main} }} variant='body'>Become A Partner</Link>
-      <Link component='text' fontWeight='500' pr={8} underline='none' sx={{ cursor: 'pointer', color: 'black', '&: hover': { color: theme?.palette?.primary?.main} }} variant='body'>Support</Link>
+      <NextLink href='/'>
+        <Link component='text' fontWeight='500' pr={8} underline='none' sx={{ cursor: 'pointer', color: 'black', '&: hover': { color: theme?.palette?.primary?.main} }} variant='body'>Pet Parent</Link>
+      </NextLink>
+      <NextLink href='/vets'>
+        <Link component='text' fontWeight='500' pr={8} underline='none' sx={{ cursor: 'pointer', color: 'black', '&: hover': { color: theme?.palette?.primary?.main} }} variant='body'>Veterinarians</Link>
+      </NextLink>
+      <NextLink href='/become-partner'>
+        <Link component='text' fontWeight='500' pr={8} underline='none' sx={{ cursor: 'pointer', color: 'black', '&: hover': { color: theme?.palette?.primary?.main} }} variant='body'>Become A Partner</Link>
+      </NextLink>
+      <NextLink href='/support'>
+        <Link component='text' fontWeight='500' pr={8} underline='none' sx={{ cursor: 'pointer', color: 'black', '&: hover': { color: theme?.palette?.primary?.main} }} variant='body'>Support</Link>
+      </NextLink>
     </Box>
     <Button variant='contained' sx={{
       minWidth: '128px',

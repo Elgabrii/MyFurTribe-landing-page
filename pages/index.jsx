@@ -7,6 +7,8 @@ import Features from '../components/Features';
 import Statistics from '../components/Statistics';
 import Vision from '../components/Vision'
 import FAQs from '../components/FAQs'
+import SubscribeToNewsLetter from '../components/SubscribeToNewsLetter';
+import Footer from '../components/Footer';
 import { Button, Typography } from '@mui/material';
 const Img = styled.div`
   background-image:  url('/homepage-background.png');
@@ -57,6 +59,8 @@ export default function Home() {
       <Statistics />
       <Vision />
       <FAQs />
+      <SubscribeToNewsLetter />
+      <Footer />
     </Box>
   </Box>
 }
