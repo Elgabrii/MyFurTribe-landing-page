@@ -4,34 +4,35 @@ import Typography from '@mui/material/Typography';
 import { Box } from "@mui/system"
 import { Button } from '@mui/material';
 import { useTheme } from '@mui/material/styles';
-const SubscribeToNewsLetter = () => {
+const SubscribeToNewsLetter = ({ isMobile }) => {
   const theme = useTheme()
   return (
-    <Box display='flex' justifyContent='space-between' px={14} py={8}>
+    <Box display='flex' flexDirection={ isMobile ? 'column' : 'row' } justifyContent={isMobile? 'flex-start' : 'space-between'} px={isMobile ? 3 : 14} py={isMobile? 2 : 8}>
       <Box flexBasis={0} flexGrow={0.6}>
-        <Typography variant='h4' fontSize='32px' fontWeight={600} color='primary'>
+        <Typography variant={isMobile ? 'h5':'h4'} fontSize={isMobile ? '20px':'32px'} align={isMobile ? 'center' : 'left'} mb={isMobile? 2 : 0} fontWeight={600} color='primary'>
           Subscribe to our newsletter for 
           product updates & recipe ideas! 
         </Typography>
       </Box>
-      <Box display='flex' flexGrow={0.4} alignItems='center'>
+      <Box display='flex' flexDirection={ isMobile ? 'column' : 'row' } flexGrow={0.4} alignItems='center'>
         <Box 
           display= 'flex' 
           flexGrow={1} 
           justifyContent='center'
+          mb={isMobile ? 2 : 0}
         >
           <TextField 
             label='Enter your Email' 
-            variant='standard' 
+            variant={ isMobile ? 'outlined' : 'standard'} 
             sx={{ 
               maxWidth: '404px', 
-              width: '80%',
+              width: isMobile ? '100%' :'80%',
               '& .MuiInputBase-input': {
-                paddingBottom: 3,
+                paddingBottom: isMobile ? 0 : 3,
               },
               '& label': {
                 color: theme.palette.primary.main,
-                fontSize: '20px',
+                fontSize: isMobile ? '12px' :'20px',
               },
               '& .MuiInput-underline:before': {
                 borderBottomColor: theme.palette.primary.main,
@@ -47,8 +48,8 @@ const SubscribeToNewsLetter = () => {
               fontSize: '16px', 
               fontFamily: 'Hellix', 
               textTransform: 'capitalize', 
-              height: '48px', 
-              width: '136px', 
+              height: isMobile ? 'unset' : '48px', 
+              width: isMobile ? 'unset' : '136px', 
               paddingX: 4, 
               borderRadius: 60 
             }}>

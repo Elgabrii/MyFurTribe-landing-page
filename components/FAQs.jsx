@@ -1,12 +1,12 @@
 const { Typography } = require("@mui/material");
 const { Box } = require("@mui/system");
 import FAQ from './FAQ';
-const FAQs = () => (
-  <Box py={8} px={30} sx={{ backgroundColor: '#F9FAFB'}} width='100%'>
-    <Typography variant='h3' fontSize='42px' fontWeight={700} color='primary' align='center'>
+const FAQs = ({ isMobile }) => (
+  <Box py={isMobile ? 3 : 8} px={ isMobile? 2 : 30} sx={{ backgroundColor: '#F9FAFB'}} width='100%'>
+    <Typography variant={ isMobile ? 'h5' : 'h3'} fontSize={isMobile ? '24px' : '42px'} fontWeight={700} color='primary' align='center'>
       Frequently Asked Questions
     </Typography>
-    <Box mt={10}>
+    <Box mt={isMobile? 2 : 10}>
       <FAQ 
         question="What if my pet doesn't like the recipe I made?"
         answer="You can easily swap recipe ingredients with our “Substitute” button, or re-take the Nutrition Pro Assessment as many times as you’d like. Create endless nutritionally balanced recipes, all tailored specifically to your pet’s activity level and life stage needs."

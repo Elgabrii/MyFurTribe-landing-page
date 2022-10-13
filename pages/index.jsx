@@ -9,8 +9,11 @@ import Vision from '../components/Vision'
 import FAQs from '../components/FAQs'
 import SubscribeToNewsLetter from '../components/SubscribeToNewsLetter';
 import Footer from '../components/Footer';
+import HomePageMobile from '../components/HomePageMobile';
 import { Button, Typography } from '@mui/material';
-const Img = styled.div`
+import useMediaQuery from '@mui/material/useMediaQuery';
+
+export const HomeBanner = styled.div`
   background-image:  url('/homepage-background.png');
   width: 100%;
   height: 800px;
@@ -19,24 +22,27 @@ const Img = styled.div`
   background-position: top;
 `
 
-const DashedBox = styled.div`
+export const DashedBox = styled.div`
   display: flex;
-  max-width: 75%;
-  padding: 26px;
-
-
   background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' rx='20' ry='20' stroke='%235466F9FF' stroke-width='4' stroke-dasharray='22' stroke-dashoffset='9' stroke-linecap='square'/%3e%3c/svg%3e");
+  padding: 26px;
   border-radius: 20px;
+  ${props => (props.isMobile ? `
+    flex-direction: column;
+    align-items: center;
+  ` : `
+    max-width: 75%;
+    background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' rx='20' ry='20' stroke='%235466F9FF' stroke-width='4' stroke-dasharray='22' stroke-dashoffset='9' stroke-linecap='square'/%3e%3c/svg%3e");
+  `)}
 `
 
-// background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' rx='12' ry='12' stroke='%23333' stroke-width='4' stroke-dasharray='22' stroke-dashoffset='0' stroke-linecap='square'/%3e%3c/svg%3e");
-// border-radius: 12px;
-
 export default function Home() {
-  return <Box width='100%'>
+  const isMobile = useMediaQuery('(max-width: 1024px')
+  return isMobile ? <HomePageMobile /> :
+  <Box width='100%'>
     <Box width='inherit'>
       <NavBar />
-      <Img>
+      <HomeBanner>
         <Box display='flex' flexDirection='column' px={13.5} width='70%' height='800px' justifyContent='center'>
           <Typography variant='h3' color='primary' fontWeight='bold'>Simplified Pet Nutrition</Typography>
           <Typography variant='h6' color='black' fontWeight='500' mb={8}>
@@ -52,7 +58,7 @@ export default function Home() {
             </Button>
           </DashedBox>
         </Box>
-      </Img>
+      </HomeBanner>
       <Partners />
       <Tribe />
       <Features />

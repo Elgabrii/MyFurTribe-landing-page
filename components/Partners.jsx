@@ -28,28 +28,42 @@ const ImageContainer= styled.div`
   // border: 1px solid;
   padding: 0px 20px;
 `
-const Partners = () => (
+const Partners = ({ isMobile }) => (
+  !isMobile ?
   <Base padding='68px 10px' display='flex' flexDirection="column" alignItems="center">
       <Typography justifyContent='center' variant='h3'>Our Partners</Typography>
     <Container >
       <ImageContainer>
-        {/* hello */}
         <Image width="100%" height='40px' src='/amazon.png' alt='amazon'/>
       </ImageContainer>
       <ImageContainer>
-        {/* tesss */}
         <Image width="100%" height='40px' src='/walmart.png' alt='walmart' />
       </ImageContainer>
       <ImageContainer>
-        {/* owaww */}
         <Image width="100%" height='100px' src='/rawfeedmiami.png' alt='rawfeedmiami' />
       </ImageContainer>
       <ImageContainer>
-        {/* bla */}
         <Image width="100%" height='80px' src='/HareToday.png' alt='haretoday' />
       </ImageContainer>
     </Container>
   </Base>
+  :
+  <Box 
+    width='100%'
+    display='flex'
+    flexDirection='column' 
+    alignItems='center' 
+    px={2} 
+    py={3} 
+    sx={{ background: '#E5E5E5'}}>  
+    <Typography justifyContent='center' variant='h4' fontWeight='600' align='center' mb={4}>Our Partners</Typography>
+    <Image width={300} height={107} src='/amazon.png' alt='amazon'/>
+    <Image width={300} height={71} src='/walmart.png' alt='amazon'/>
+    <Box display='flex' flexDirection='row' alignItems='center'>
+      <Image width={200} height={206} src='/rawfeedmiami.png' alt='rawfeedmiami' />
+      <Image width={200} height={183} src='/HareToday.png' alt='haretoday' />
+    </Box>
+  </Box>
 )
 
 export default Partners
