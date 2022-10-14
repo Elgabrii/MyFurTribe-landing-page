@@ -2,6 +2,8 @@ import NavBar from "../components/Navbar";
 import PartnerForm from "../components/PartnerForm";
 import Box from '@mui/material/Box'
 import Typography from '@mui/material/Typography'
+import SubscribeToNewsLetter from "../components/SubscribeToNewsLetter";
+import Footer from "../components/Footer";
 export default function BecomePartner() {
   return <> 
     <NavBar />
@@ -22,9 +24,9 @@ export default function BecomePartner() {
       </Box>
       <Box justifyContent='center'>
           <PartnerForm />
-        {/* <Typography>
-        </Typography> */}
       </Box>
     </Box>
+    <SubscribeToNewsLetter />
+    <Footer />
   </>
 }

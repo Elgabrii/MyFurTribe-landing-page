@@ -2,6 +2,8 @@ import NavBar from '../components/Navbar'
 import Box from '@mui/material/Box'
 import { Divider, Typography, TextField, FormLabel, FormControl, Button } from '@mui/material'
 import { styled } from '@mui/material/styles';
+import SubscribeToNewsLetter from '../components/SubscribeToNewsLetter';
+import Footer from '../components/Footer';
 
 const StyledInputField = styled(TextField)({
   '& label': {
@@ -84,6 +86,8 @@ const Support = () => {
         </Box>
       </Box>
     </Box>
+    <SubscribeToNewsLetter />
+    <Footer />
     </>
   )
 }

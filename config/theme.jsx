@@ -7,7 +7,7 @@ palette: {
       main: '#5466F9',
    },
    secondary: {
-     main: '#19857b',
+     main: '#1C1B34',
    },
    error: {
    main: red.A400,
