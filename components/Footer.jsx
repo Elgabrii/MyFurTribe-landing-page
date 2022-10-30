@@ -2,18 +2,18 @@ import { Typography } from "@mui/material"
 import { Box } from "@mui/system"
 import Image from 'next/image'
 
-const Footer = () => (
-  <Box display='flex' justifyContent='space-between' px={14} py={8} sx={{ borderTop: '1px solid #1C1B3433' }}>
+const Footer = ({ isMobile }) => (
+  <Box display='flex' flexDirection={ isMobile ? 'column' : 'row'} justifyContent='space-between' px={isMobile ? 3 : 14} py={ isMobile ? 2 : 8} sx={{ borderTop: '1px solid #1C1B3433' }}>
     <Box display='flex' flexDirection='column'>
       <Box justifyContent='center'>
-        <Image src='/tribelogo.png' width='242px' height='42px' alt='logo' />
+        <Image src='/tribelogo.png' width={isMobile? 150: '242px'} height={isMobile ? '26px' : '42px'} alt='logo' />
       </Box>
       <Typography variant='body2' color='#8D8D99'>
         © 2022 My Furtribe. All rights reserved.
       </Typography>
     </Box>
-    <Box display='flex' flexGrow={1} justifyContent='center'>
-      <Box display='flex' flexDirection='column' px={4}>
+    <Box display='flex' flexDirection={ isMobile ? 'column' : 'row'} flexGrow={1} justifyContent='center'>
+      <Box display='flex' flexDirection='column' px={isMobile ? 1 : 4}>
         <Typography color='#1C1B34' fontWeight={600} variant='body2' mb={1}>
           Product
         </Typography>
@@ -24,7 +24,7 @@ const Footer = () => (
           Story
         </Typography>
       </Box>
-      <Box display='flex' flexDirection='column' px={4}>
+      <Box display='flex' flexDirection='column' px={isMobile ? 1 : 4}>
         <Typography color='#1C1B34' fontWeight={600} variant='body2' mb={1}>
           Company
         </Typography>
@@ -38,7 +38,7 @@ const Footer = () => (
           Support
         </Typography>
       </Box>
-      <Box display='flex' flexDirection='column' px={4}>
+      <Box display='flex' flexDirection='column' px={isMobile ? 1 : 4}>
         <Typography color='#1C1B34' fontWeight={600} variant='body2' mb={1}>
           Support
         </Typography>

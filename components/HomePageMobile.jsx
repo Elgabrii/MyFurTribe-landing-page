@@ -9,6 +9,7 @@ import StatisticsMobile from './StatisticsMobile';
 import VisionMobile from './VisionMobile';
 import FAQs from './FAQs';
 import SubscribeToNewsLetter from './SubscribeToNewsLetter';
+import Footer from '../components/Footer';
 const HomePageMobile = () => {
   return <Box width='100%'>
     <Box>
@@ -35,6 +36,7 @@ const HomePageMobile = () => {
       <VisionMobile />
       <FAQs isMobile />
       <SubscribeToNewsLetter isMobile />
+      <Footer isMobile />
     </Box>
   </Box>
 }
