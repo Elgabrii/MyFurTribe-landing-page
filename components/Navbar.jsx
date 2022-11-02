@@ -51,17 +51,17 @@ const NavBar = ({ isMobile }) => {
         </Link>
       </a>
     </NextLink>
-    <NextLink href='/vets' passHref>
+    <NextLink href='/vets' passHref legacyBehavior>
       <a>
+      <Link component='text' fontWeight='500' pr={4} underline='none' sx={{ cursor: 'pointer', color: 'black', '&: hover': { color: theme?.palette?.primary?.main} }} variant='body'>
         Veterinarians
+      </Link>
       </a>
     </NextLink>
-    <NextLink href='/become-partner' passHref>
-      <a>
-        <Link component='text' fontWeight='500' pr={4} underline='none' sx={{ cursor: 'pointer', color: 'black', '&: hover': { color: theme?.palette?.primary?.main} }} variant='body'>
-          Become A Partner
-        </Link>
-      </a>
+    <NextLink href='/become-partner' passHref legacyBehavior>
+      <Link component='text' fontWeight='500' pr={4} underline='none' sx={{ cursor: 'pointer', color: 'black', '&: hover': { color: theme?.palette?.primary?.main} }} variant='body'>
+        Become A Partner
+      </Link>
     </NextLink>
     <NextLink href='/support' passHref>
       <a>
