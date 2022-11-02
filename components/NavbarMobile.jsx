@@ -59,7 +59,8 @@ const NavBarMobile = () => {
       }
     </Button>
     {
-      isMenuOpen && <NavigationMenuMobile />
+      isMenuOpen && ''
+      // <NavigationMenuMobile />
     }
   </Box>
 }
