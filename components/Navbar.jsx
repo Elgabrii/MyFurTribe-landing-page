@@ -44,28 +44,28 @@ const NavBar = ({ isMobile }) => {
     </ImageContainer>
   </Box>
   <Box direction="row" justifyContent='space-between' alignSelf='center' pl={2} >
-    <NextLink href='/'>
+    <NextLink href='/' passHref>
       <a>
         <Link component='text' fontWeight='500' pr={4} underline='none' sx={{ cursor: 'pointer', color: 'black', '&: hover': { color: theme?.palette?.primary?.main} }} variant='body'>
           Pet Parent
         </Link>
       </a>
     </NextLink>
-    <NextLink href='/vets'>
+    <NextLink href='/vets' passHref>
       <a>
       <Link component='text' fontWeight='500' pr={4} underline='none' sx={{ cursor: 'pointer', color: 'black', '&: hover': { color: theme?.palette?.primary?.main} }} variant='body'>
         Veterinarians
       </Link>
       </a>
     </NextLink>
-    <NextLink href='/become-partner'>
+    <NextLink href='/become-partner' passHref>
       <a>
         <Link component='text' fontWeight='500' pr={4} underline='none' sx={{ cursor: 'pointer', color: 'black', '&: hover': { color: theme?.palette?.primary?.main} }} variant='body'>
           Become A Partner
         </Link>
       </a>
     </NextLink>
-    <NextLink href='/support'>
+    <NextLink href='/support' passHref>
       <a>
         <Link component='text' fontWeight='500' pr={4} underline='none' sx={{ cursor: 'pointer', color: 'black', '&: hover': { color: theme?.palette?.primary?.main} }} variant='body'>
           Support
