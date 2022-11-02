@@ -16,16 +16,16 @@ const NavigationMenuMobile = () => {
   height='100vh' 
   sx={{ position: 'absolute', top: 60 , background: 'white', zIndex: 999 }}
   >
-    <NextLink href='/'>
+    <NextLink href='/' passHref legacyBehavior>
       <Link component='text' fontWeight='500' align='center' py={2} underline='none' sx={{ cursor: 'pointer', color: theme?.palette?.primary?.main}} variant='body'>Pet Parent</Link>
     </NextLink>
-    <NextLink href='/vets'>
+    <NextLink href='/vets'  passHref legacyBehavior>
       <Link component='text' fontWeight='500' align='center' py={2} underline='none' sx={{ cursor: 'pointer', color: theme?.palette?.primary?.main}} variant='body'>Veterinarians</Link>
     </NextLink>
-    <NextLink href='/become-partner'>
+    <NextLink href='/become-partner'  passHref legacyBehavior>
       <Link component='text' fontWeight='500' align='center' py={2} underline='none' sx={{ cursor: 'pointer', color: theme?.palette?.primary?.main}} variant='body'>Become A Partner</Link>
     </NextLink>
-    <NextLink href='/support'>
+    <NextLink href='/support' passHref legacyBehavior>
       <Link component='text' fontWeight='500' align='center' py={2} underline='none' sx={{ cursor: 'pointer', color: theme?.palette?.primary?.main}} variant='body'>Support</Link>
     </NextLink>
 </Box>
