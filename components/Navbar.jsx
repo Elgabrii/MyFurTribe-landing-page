@@ -53,9 +53,7 @@ const NavBar = ({ isMobile }) => {
     </NextLink>
     <NextLink href='/vets' passHref>
       <a>
-      <Link component='text' fontWeight='500' pr={4} underline='none' sx={{ cursor: 'pointer', color: 'black', '&: hover': { color: theme?.palette?.primary?.main} }} variant='body'>
         Veterinarians
-      </Link>
       </a>
     </NextLink>
     <NextLink href='/become-partner' passHref>
