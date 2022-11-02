@@ -6,6 +6,7 @@ import { useEffect, useState } from 'react';
 import { styled } from '@mui/material/styles';
 import { useFormik } from 'formik';
 import axios from 'axios';
+import CircularProgress from '@mui/material/CircularProgress';
 const StyledInputField = styled(TextField)({
   '& input': {
     color: 'white',
@@ -58,6 +59,14 @@ const validate = values => {
     errors.email = 'Invalid email address';
   }
 
+  if (!values.phoneNumber) {
+    errors.phoneNumber = 'Required'
+  }
+
+  if (!values.clinicRequestTypeId) {
+    errors.clinicRequestTypeId = 'Please select your entity'
+  }
+
   return errors;
 };
 const FormTypes = Object.freeze({
@@ -67,11 +76,13 @@ const FormTypes = Object.freeze({
 })
 const PartnerForm = ({ isMobile }) => {
   const [requestTypes, setRequestTypes] = useState([])
+  const [requestTypesLoading, setRequestTypesLoading] = useState(true)
   const [practiceRoles, setPracticeRoles] = useState([])
   const [distributionMethods, setDistributionMethods] = useState([])
   const [formType, setFormType] = useState(FormTypes.EMPLOYER)
   const [requestTypeSelectText, setRequestTypeSelectText] = useState('Select your entity')
   const [formSubmitted, setFormSubmitted] = useState(false)
+  const [formSubmissionLoading, setFormSubmissionLoading] = useState(false)
   useEffect(() => {
     let unmounted = false
     const controller = new AbortController()
@@ -81,6 +92,7 @@ const PartnerForm = ({ isMobile }) => {
           const req = await axios.get('https://furtrip.onrender.com/api/resource/clinic-request-types')
           const result = req.data.data
           setRequestTypes(result)
+          setRequestTypesLoading(false)
         } catch (err) {
           console.log(err)
         }
@@ -133,7 +145,9 @@ const PartnerForm = ({ isMobile }) => {
       platform: '',
       handle: '',
     },
+    validate,
     onSubmit: async(values, { resetForm }) => {
+      setFormSubmissionLoading(true)
       const req = await axios.post('https://furtrip.onrender.com/api/clinic-requests',{
         "clinic_request_type_id": values.clinicRequestTypeId,
         "first_name": values.firstName,
@@ -166,7 +180,8 @@ const PartnerForm = ({ isMobile }) => {
           I am a...
         </Typography>
         <form onSubmit={formik.handleSubmit}>
-          <FormControl fullWidth>
+          {
+            requestTypesLoading ? <CircularProgress color='primary' /> : <FormControl fullWidth>
             <InputLabel shrink={false} sx={{ color: 'white',}} id="demo-simple-select-label">
               {requestTypeSelectText}
             </InputLabel>
@@ -186,7 +201,7 @@ const PartnerForm = ({ isMobile }) => {
                 width: '100%', 
                 borderRadius: '16px', 
                 border: '1px solid white',
-                marginBottom: '32px',
+                marginBottom: formik.errors.clinicRequestTypeId ? '0' : '32px',
               }} 
               mt={6}
               >
@@ -194,7 +209,9 @@ const PartnerForm = ({ isMobile }) => {
                   requestTypes&&requestTypes.map(request => <MenuItem key={request.code} value={request&&request.id}>{request.name}</MenuItem>)
                 }
               </Select>
+              {formik.touched.clinicRequestTypeId && formik.errors.clinicRequestTypeId ? <Typography color='red'>{formik.errors.clinicRequestTypeId}</Typography> : null}
             </FormControl>
+          }
             <FormControl fullWidth>
               <Box display='flex' flexDirection={ isMobile ? 'column' : 'row'} >
                 <Box display='flex' flexDirection='column' flexGrow={1} pr={isMobile? 0 : 5} mb={3}>
@@ -212,6 +229,7 @@ const PartnerForm = ({ isMobile }) => {
                     onBlur={formik.handleBlur}
                     value={formik.values.firstName}
                   />
+                {formik.touched.firstName && formik.errors.firstName ? <Typography color='red'>{formik.errors.firstName}</Typography> : null}
                 </Box>
                 <Box display='flex' flexDirection='column' flexGrow={1}>
                   <FormLabel sx= {{color: 'white', fontSize: '14px', marginBottom: 1}} required >
@@ -227,6 +245,7 @@ const PartnerForm = ({ isMobile }) => {
                     onBlur={formik.handleBlur}
                     value={formik.values.lastName}
                   />
+                  {formik.touched.lastName && formik.errors.lastName ? <Typography color='red'>{formik.errors.lastName}</Typography> : null}
                 </Box>
               </Box>
             </FormControl> 
@@ -248,6 +267,7 @@ const PartnerForm = ({ isMobile }) => {
                     type='email' 
                     variant="outlined"
                   />
+                  {formik.touched.email && formik.errors.email ? <Typography color='red'>{formik.errors.email}</Typography> : null}
                 </Box>
                 <Box display='flex' flexDirection='column' flexGrow={1}>
                   <FormLabel sx= {{color: 'white', fontSize: '14px', marginBottom: 1}} required >
@@ -265,6 +285,7 @@ const PartnerForm = ({ isMobile }) => {
                     label={formik.values.phoneNumber ? '' : 'Write phone Number'}
                     variant="outlined" 
                   />
+                  {formik.touched.phoneNumber && formik.errors.phoneNumber ? <Typography color='red'>{formik.errors.phoneNumber}</Typography> : null}
                 </Box>
               </Box>
             </FormControl>
@@ -447,8 +468,8 @@ const PartnerForm = ({ isMobile }) => {
                   </FormControl>
                 }
             <Box display='flex' flexDirection='column' alignItems='center' justifyContent='center' pt={3}>
-              <Button type='submit' variant='contained' sx={{ borderRadius: '16px', fontSize: '16px', width: '140px' }}>
-                Submit
+              <Button type='submit' variant='contained' sx={{ borderRadius: '16px', fontSize: '16px', width: '140px', fontFamily: 'Hellix' }}>
+              {formSubmissionLoading ? <CircularProgress color='secondary' size={28} /> : 'Submit'}
               </Button>
               <Typography sx={{ opacity: 0.5 }} fontSize='11px' align='center' mt={2} color='#FFFFFF'>
                 This confidential demo request is for veterinary professionals looking to offer MyFurTribe as a service to their practice clients. If you are a pet parent looking for more information about the MFT Mobile App, please visit the “Pet Parents” page.

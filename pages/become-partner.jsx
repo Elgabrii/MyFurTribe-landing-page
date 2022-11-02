@@ -8,18 +8,18 @@ export default function BecomePartner() {
   return <> 
     <Box className='activeOnDesktop'>
       <NavBar />
-      <Box display='flex' sx={{ backgroundColor: '#F8F8F9' }} justifyContent='space-around' pt={10}>
+      <Box display='flex' sx={{ backgroundImage: "url('/curvedbackground.png')", backgroundSize: 'cover', backgroundPosition: 'top' }} justifyContent='space-around' py={18} px={4}>
         <Box display='flex' flexDirection='column' >
-          <Typography variant="h4" alignSelf='center' >
+          <Typography variant="h4" alignSelf='center' fontWeight={700}>
             How it Works
           </Typography>
-          <Typography py={3} alignSelf='flex-start' variant="h4" color='#5466F9'>
+          <Typography py={3} alignSelf='flex-start' variant="h4" color='primary' fontWeight={600}>
             1. Enter your information
           </Typography>
-          <Typography py={3} alignSelf='flex-start' variant="h4" color='#5466F9'>
+          <Typography py={3} alignSelf='flex-start' variant="h4" color='primary' fontWeight={600}>
             2. Take Our Quick Demo + Onboarding
           </Typography>
-          <Typography py={3} alignSelf='flex-start' variant="h4" color='#5466F9'>
+          <Typography py={3} alignSelf='flex-start' variant="h4" color='primary' fontWeight={600}>
             3. Get Started!
           </Typography>
         </Box>
