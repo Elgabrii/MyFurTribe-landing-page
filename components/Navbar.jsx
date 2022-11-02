@@ -45,16 +45,24 @@ const NavBar = ({ isMobile }) => {
   </Box>
   <Box direction="row" justifyContent='space-between' alignSelf='center' pl={2} >
     <NextLink href='/'>
-      <Link component='text' fontWeight='500' pr={4} underline='none' sx={{ cursor: 'pointer', color: 'black', '&: hover': { color: theme?.palette?.primary?.main} }} variant='body'>Pet Parent</Link>
+      <Link component='text' fontWeight='500' pr={4} underline='none' sx={{ cursor: 'pointer', color: 'black', '&: hover': { color: theme?.palette?.primary?.main} }} variant='body'>
+        <a>Pet Parent</a>
+      </Link>
     </NextLink>
     <NextLink href='/vets'>
-      <Link component='text' fontWeight='500' pr={4} underline='none' sx={{ cursor: 'pointer', color: 'black', '&: hover': { color: theme?.palette?.primary?.main} }} variant='body'>Veterinarians</Link>
+      <Link component='text' fontWeight='500' pr={4} underline='none' sx={{ cursor: 'pointer', color: 'black', '&: hover': { color: theme?.palette?.primary?.main} }} variant='body'>
+        <a>Veterinarians</a>
+      </Link>
     </NextLink>
     <NextLink href='/become-partner'>
-      <Link component='text' fontWeight='500' pr={4} underline='none' sx={{ cursor: 'pointer', color: 'black', '&: hover': { color: theme?.palette?.primary?.main} }} variant='body'>Become A Partner</Link>
+      <Link component='text' fontWeight='500' pr={4} underline='none' sx={{ cursor: 'pointer', color: 'black', '&: hover': { color: theme?.palette?.primary?.main} }} variant='body'>
+        <a>Become A Partner</a>
+      </Link>
     </NextLink>
     <NextLink href='/support'>
-      <Link component='text' fontWeight='500' pr={4} underline='none' sx={{ cursor: 'pointer', color: 'black', '&: hover': { color: theme?.palette?.primary?.main} }} variant='body'>Support</Link>
+      <Link component='text' fontWeight='500' pr={4} underline='none' sx={{ cursor: 'pointer', color: 'black', '&: hover': { color: theme?.palette?.primary?.main} }} variant='body'>
+        <a>Support</a>
+      </Link>
     </NextLink>
   </Box>
   <Button variant='contained' sx={{
