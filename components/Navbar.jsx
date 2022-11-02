@@ -49,11 +49,9 @@ const NavBar = ({ isMobile }) => {
         Pet Parent
       </a>
     </NextLink>
-    <NextLink href='/vets' passHref legacyBehavior>
-      <a>
+      <a href="/vets">
         Veterinarians
       </a>
-    </NextLink>
     <NextLink href='/become-partner' passHref legacyBehavior>
       <a>
         Become A Partner
