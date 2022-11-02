@@ -49,6 +49,7 @@ const NavBar = ({ isMobile }) => {
         Pet Parent
       </a>
     </NextLink>
+    {/* eslint-disable-next-line */}
       <a href="/vets">
         Veterinarians
       </a>
