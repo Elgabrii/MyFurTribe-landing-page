@@ -12,14 +12,13 @@ const NavBar = ({ isMobile }) => {
   const theme = useTheme()
   return !isMobile? <Box 
   display='flex' 
-  height='60px' 
   justifyContent='space-between' 
   width='100%'
   flexDirection='row'
   alignItems='center'  
   px='64px'
-  pt='24px'
-  sx={{ position: 'absolute', width: '100%' }}
+  py='21px'
+  sx={{ position: 'absolute', width: '100%', background: 'white' }}
 >
   <Box justifyContent='center'>
     <Image src='/tribelogo.png' width='210px' height='40px' alt='logo' />

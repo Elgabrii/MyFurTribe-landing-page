@@ -51,6 +51,8 @@ export default function BecomePartner() {
           <PartnerForm isMobile/>
         </Box>
       </Box>
+      <SubscribeToNewsLetter isMobile />
+      <Footer isMobile />
     </Box>
   </>
 }

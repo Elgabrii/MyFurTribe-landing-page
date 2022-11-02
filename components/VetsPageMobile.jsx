@@ -6,6 +6,7 @@ import SubscribeToNewsLetter from './SubscribeToNewsLetter';
 import MyFurTribeFeatures from './MyFurTribeFeatures';
 import Partnerships from './Partnerships';
 import Demo from './Demo';
+import Footer from "../components/Footer";
 
 const VetsPageMobile = () => (
   <Box>
@@ -38,6 +39,7 @@ const VetsPageMobile = () => (
     <Demo isMobile />
     <FAQs isMobile />
     <SubscribeToNewsLetter isMobile />
+    <Footer isMobile />
   </Box>
 )
 
