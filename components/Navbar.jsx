@@ -40,7 +40,7 @@ const NavBar = ({ isMobile }) => {
 >
   <Box display='flex'>
     <ImageContainer justifyContent='center'>
-      <Image src='/tribelogo.png' className='image' layout='fill' alt='logo' />
+      <Image src='/tribelogo.png' className='image' height={0} width={180} alt='logo' />
     </ImageContainer>
   </Box>
   <Box direction="row" justifyContent='space-between' alignSelf='center' pl={2} >
@@ -63,6 +63,8 @@ const NavBar = ({ isMobile }) => {
     borderRadius: 50,
     padding: '8px 46px',
     alignSelf: 'flex-end',
+    flexBasis: 0,
+    // flexGrow: 0,
   }}>
     <Typography variant='h4' sx={{ fontsize: 14, textTransform: 'capitalize', fontFamily: 'Hellix' }} color='inherit'>
       Login
