@@ -1,7 +1,7 @@
 
 import React from 'react';
 import Box from '@mui/material/Box';
-import Link from '@mui/material/Link';
+// import Link from '@mui/material/Link';
 import NextLink from 'next/link'
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Button';
@@ -44,30 +44,24 @@ const NavBar = ({ isMobile }) => {
     </ImageContainer>
   </Box>
   <Box direction="row" justifyContent='space-between' alignSelf='center' pl={2} >
-    <NextLink href='/' passHref>
+    <NextLink href='/' passHref legacyBehavior>
       <a>
-        <Link component='text' fontWeight='500' pr={4} underline='none' sx={{ cursor: 'pointer', color: 'black', '&: hover': { color: theme?.palette?.primary?.main} }} variant='body'>
-          Pet Parent
-        </Link>
+        Pet Parent
       </a>
     </NextLink>
     <NextLink href='/vets' passHref legacyBehavior>
       <a>
-      <Link component='text' fontWeight='500' pr={4} underline='none' sx={{ cursor: 'pointer', color: 'black', '&: hover': { color: theme?.palette?.primary?.main} }} variant='body'>
         Veterinarians
-      </Link>
       </a>
     </NextLink>
     <NextLink href='/become-partner' passHref legacyBehavior>
-      <Link component='text' fontWeight='500' pr={4} underline='none' sx={{ cursor: 'pointer', color: 'black', '&: hover': { color: theme?.palette?.primary?.main} }} variant='body'>
+      <a>
         Become A Partner
-      </Link>
+      </a>
     </NextLink>
     <NextLink href='/support' passHref>
       <a>
-        <Link component='text' fontWeight='500' pr={4} underline='none' sx={{ cursor: 'pointer', color: 'black', '&: hover': { color: theme?.palette?.primary?.main} }} variant='body'>
-          Support
-        </Link>
+        Support
       </a>
     </NextLink>
   </Box>
