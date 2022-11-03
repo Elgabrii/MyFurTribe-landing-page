@@ -112,8 +112,8 @@ const Support = () => {
             Simply fill in a support request and we’ll be in touch ASAP
           </Typography>
         </Box>
-        <form onSubmit={formik.handleSubmit}>
-          <Box flexGrow={1} sx={{zIndex: 999}}>
+        <form onSubmit={formik.handleSubmit} style={{ zIndex: 999}}>
+          <Box flexGrow={1} >
             <Box width='624px' sx={{ background: '#1C1B34', borderRadius: '16px'}} padding='40px'>
               <Typography color='white' fontSize='26px' fontWeight='700' mb={3} align='center'>
                 Support Request
@@ -216,7 +216,7 @@ const Support = () => {
             Simply fill in a support request and we’ll be in touch ASAP
           </Typography>
         </Box>
-        <form onSubmit={formik.handleSubmit}>
+        <form onSubmit={formik.handleSubmit} style={{ zIndex: 999}}>
           <Box sx={{ zIndex: 999 }}>
             <Box width='100%' sx={{ background: '#1C1B34', borderRadius: '16px'}} padding='40px'>
               <Typography color='white' fontSize='26px' fontWeight='700' mb={3} align='center'>
