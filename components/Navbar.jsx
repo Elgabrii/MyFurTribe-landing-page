@@ -33,10 +33,10 @@ const NavBar = ({ isMobile }) => {
   justifyContent='space-between' 
   width='100%'
   flexDirection='row'
-  alignItems='center'  
+  alignItems='center' 
   px='64px'
   py='21px'
-  sx={{ position: 'absolute', width: '100%', background: 'white' }}
+  sx={{ position: 'absolute', width: '100%', background: 'white', zIndex: 999 }}
 >
   <Box display='flex'>
     <ImageContainer justifyContent='center'>
