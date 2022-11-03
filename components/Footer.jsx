@@ -1,7 +1,7 @@
 import { Typography } from "@mui/material"
 import { Box } from "@mui/system"
 import Image from 'next/image'
-
+import Link from 'next/link';
 const Footer = ({ isMobile }) => (
   <Box display='flex' flexDirection={ isMobile ? 'column' : 'row'} justifyContent='space-between' px={isMobile ? 3 : 14} py={ isMobile ? 2 : 8} sx={{ borderTop: '1px solid #1C1B3433' }}>
     <Box display='flex' flexDirection='column'>
@@ -18,7 +18,9 @@ const Footer = ({ isMobile }) => (
           Product
         </Typography>
         <Typography color='primary' fontWeight={600} variant='body'>
-          How It works
+          <Link href='/vets'>
+            How It works
+          </Link>
         </Typography>
         <Typography color='primary' fontWeight={600} variant='body'>
           Story
