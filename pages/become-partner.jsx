@@ -23,7 +23,7 @@ export default function BecomePartner() {
             3. Get Started!
           </Typography>
         </Box>
-        <Box justifyContent='center'>
+        <Box justifyContent='center' sx={{ zIndex: 999}}>
           <PartnerForm />
         </Box>
       </Box>
@@ -47,7 +47,7 @@ export default function BecomePartner() {
             3. Get Started!
           </Typography>
         </Box>
-        <Box justifyContent='center'>
+        <Box justifyContent='center' sx={{ zIndex: 999}}>
           <PartnerForm isMobile/>
         </Box>
       </Box>
