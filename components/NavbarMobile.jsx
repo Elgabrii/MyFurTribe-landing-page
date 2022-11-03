@@ -47,7 +47,8 @@ const NavBarMobile = () => {
     px={1}
     sx={{
       borderBottom: '1px solid #1C1B3433',
-      position: 'relative'
+      position: 'relative',
+      zIndex: 999,
     }}
   >
     <Box>
