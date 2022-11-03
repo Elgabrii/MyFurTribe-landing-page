@@ -102,7 +102,7 @@ const Support = () => {
     <>
     <Box className='activeOnDesktop'>
       <NavBar />
-      <Box display='flex' sx={{ backgroundImage: "url('/curvedbackground.png')", backgroundSize: 'cover', backgroundPosition: 'bottom'}} justifyContent='space-around' px={10} pt={18} pb={20}>
+      <Box display='flex' sx={{ backgroundImage: "url('/curvedbackground.png')", backgroundSize: 'cover', backgroundPosition: 'bottom', zIndex: 999 }} justifyContent='space-around' px={10} pt={18} pb={20}>
         <Box flexGrow={1} pr={5}>
           <Typography color='primary' variant='h4' fontWeight={700} align='center'>
             Whether you’re an MFT partner using our dashboard, or a pet parent using our mobile app, we’re here to help! 
@@ -207,7 +207,7 @@ const Support = () => {
     </Box>
     <Box className='activeOnMobile'>
     <NavBar isMobile/>
-    <Box display='flex' flexDirection='column' sx={{ background: '#F8F8F9'}} justifyContent='space-around' padding={2}>
+    <Box display='flex' flexDirection='column' sx={{ background: '#F8F8F9', zIndex: 999}} justifyContent='space-around' padding={2}>
         <Box p={2}>
           <Typography color='primary' variant='h4' align='center' fontWeight={700}>
             Whether you’re an MFT partner using our dashboard, or a pet parent using our mobile app, we’re here to help! 

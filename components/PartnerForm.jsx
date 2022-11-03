@@ -170,7 +170,7 @@ const PartnerForm = ({ isMobile }) => {
   })
   
   return (
-    <Box width={isMobile ? '100%' : '624px'} borderRadius='16px' sx={{ background: '#1C1B34'}} padding='40px'>
+    <Box width={isMobile ? '100%' : '624px'} borderRadius='16px' sx={{ background: '#1C1B34', zIndex: 999}} padding='40px'>
       { !formSubmitted ?
       <>
         <Typography color='white' fontSize='26px' fontWeight='700' mb={3}>
