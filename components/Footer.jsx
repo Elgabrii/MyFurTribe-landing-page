@@ -2,6 +2,22 @@ import { Typography } from "@mui/material"
 import { Box } from "@mui/system"
 import Image from 'next/image'
 import Link from 'next/link';
+import styled from '@emotion/styled'
+const ImageContainer = styled.div`
+  width: 100%;
+  display: flex;
+  align-items: center;
+  > span {
+    position: unset !important;
+  }
+
+  .image {
+    object-fit: contain;
+    width: 100% !important;
+    position: relative !important;
+    height: unset !important;
+  }
+`
 const Footer = ({ isMobile }) => (
   <Box display='flex' flexDirection={ isMobile ? 'column' : 'row'} justifyContent='space-between' px={isMobile ? 3 : 14} py={ isMobile ? 2 : 8} sx={{ borderTop: '1px solid #1C1B3433' }}>
     <Box display='flex' flexDirection='column'>
@@ -59,12 +75,12 @@ const Footer = ({ isMobile }) => (
       <Typography fontWeight={600} variant='body2' mb={2}>
         Download The app
       </Typography>
-      <Box>
+      <Box display='flex' flexDirection={isMobile? 'column': 'row'} flexBasis={0} flexGrow={0.5}>
         <Box>
-          <Image />
+          <Image src='/app-store.png' width={200} height={73} className='image' alt='iphone' />
         </Box>
         <Box>
-          <Image />
+          <Image src='/GooglePlay.png' width={200} height={80} className='image' alt='iphone' />
         </Box>
       </Box>
     </Box>

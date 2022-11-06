@@ -7,9 +7,47 @@ import TextSnippetIcon from '@mui/icons-material/TextSnippet';
 import AddIcon from '@mui/icons-material/Add';
 import TakeoutDiningIcon from '@mui/icons-material/TakeoutDining';
 import Image from 'next/image';
+import styled from '@emotion/styled'
+
+const ImageContainer = styled.div`
+  width: 100%;
+  display: flex;
+  align-items: center;
+  > span {
+    position: unset !important;
+  }
+  .image {
+    object-fit: contain;
+    width: 100% !important;
+    position: relative !important;
+    height: unset !important;
+  }
+`
+
 const FeaturesMobile = () => {
   const theme = useTheme()
- return <Box py={2}>
+ return <Box py={2} sx={{ backgroundImage: "url('/2.png')", backgroundSize:'cover', backgroundPosition: 'top'}}>
+  <Box width='100%' display='flex' justifyContent='center'>
+    <Box width='60%'>
+      <ImageContainer>
+        <Image src='/phone2.png' layout='fill' className='image' alt='iphone' />
+      </ImageContainer>
+    </Box>
+  </Box>
+  <Box width='100%' display='flex' justifyContent='center'>
+    <Box width='60%'>
+      <ImageContainer>
+        <Image src='/phone3.png' layout='fill' className='image' alt='iphone' />
+      </ImageContainer>
+    </Box>
+  </Box>
+  <Box width='100%' display='flex' justifyContent='center'>
+    <Box width='60%'>
+      <ImageContainer>
+        <Image src='/phone4.png' layout='fill' className='image' alt='iphone' />
+      </ImageContainer>
+    </Box>
+  </Box>
   <Typography fontSize={24} fontWeight='600' align='center' color={theme.palette.primary.main}>Get Access To <span style={{ color: 'black'}}>AI-Powered</span> Pet Nutrition</Typography>
   <Box p={1}>
     <Box display='flex' alignItems='start' py={2}>

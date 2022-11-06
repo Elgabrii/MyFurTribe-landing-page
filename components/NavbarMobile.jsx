@@ -56,7 +56,7 @@ const NavBarMobile = () => {
     </Box>
     <Button onClick={toggleMenu}>
       {
-        isMenuOpen ? <CloseIcon /> : <MenuIcon />
+        isMenuOpen ? <CloseIcon /> : <MenuIcon fontSize='large' />
       }
     </Button>
     {

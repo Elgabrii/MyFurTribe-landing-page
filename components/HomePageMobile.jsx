@@ -10,10 +10,13 @@ import VisionMobile from './VisionMobile';
 import FAQs from './FAQs';
 import SubscribeToNewsLetter from './SubscribeToNewsLetter';
 import Footer from '../components/Footer';
+import styled from '@emotion/styled'
+
 const HomePageMobile = () => {
   return <Box width='100%'>
     <Box>
       <NavBar isMobile/>
+      <Box height={600} sx={{ backgroundImage: "url('/home-page-banner-mobile.png')", backgroundSize: 'cover', height: 300 }} />
       <Box display='flex' flexDirection='column' px={3} py={2} justifyContent='center'>
         <Typography variant='h4' color='primary' fontWeight='bold' align='center'>Simplified Pet Nutrition</Typography>
         <Typography variant='h6' color='black' fontWeight='500' mb={8} align='center'>
