@@ -36,11 +36,11 @@ const NavBar = ({ isMobile }) => {
   alignItems='center' 
   px='64px'
   py='21px'
-  sx={{ position: 'absolute', width: '100%', background: 'white', zIndex: 999 }}
+  sx={{ position: 'absolute', width: '100%', zIndex: 999 }}
 >
   <Box display='flex'>
     <ImageContainer justifyContent='center'>
-      <Image src='/tribelogo.png' className='image' height={0} width={180} alt='logo' />
+      <Image src='/logo.png' className='image' height={0} width={180} alt='logo' />
     </ImageContainer>
   </Box>
   <Box direction="row" justifyContent='space-between' alignSelf='center' pl={2} >

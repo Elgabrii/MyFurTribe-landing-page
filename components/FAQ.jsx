@@ -6,7 +6,7 @@ import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 const FAQ = ({question, answer, open = false,}) => {
   const [expanded, setExpanded] = useState(false)
   const toggleFAQ = () => setExpanded(!expanded)
-  return <Box borderRadius='16px' my={4}  p={4} width='inherit' sx={{ background: 'white', boxShadow: '0px 1px 20px rgba(28, 27, 52, 0.05);'}}>
+  return <Box borderRadius='16px' my={4}  p={3} width='inherit' sx={{ background: 'white', boxShadow: '0px 1px 20px rgba(28, 27, 52, 0.05);'}}>
     <Box display='flex' justifyContent='space-between' alignItems='center'>
       <Typography variant='body1' color='primary' fontWeight={expanded || open ? 700 : 400}>
         {question}

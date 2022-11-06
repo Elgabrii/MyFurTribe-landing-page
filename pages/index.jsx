@@ -27,7 +27,7 @@ export const HomeBanner = styled.div`
 export const DashedBox = styled.div`
   display: flex;
   background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' rx='20' ry='20' stroke='%235466F9FF' stroke-width='4' stroke-dasharray='22' stroke-dashoffset='9' stroke-linecap='square'/%3e%3c/svg%3e");
-  padding: 26px;
+  padding: 21px;
   align-items: center;
   border-radius: 20px;
   ${props => (props.isMobile ? `
@@ -57,7 +57,7 @@ export default function Home() {
               veterinarians & veterinary nutritionists
             </Typography>
             <DashedBox display='flex' width='70%' p={2} justifyContent='space-evenly' alignItems='center' sx={{ }}>
-              <Typography flexBasis={0} flexGrow={1} variant='body' color='primary' fontWeight='600' pr={0.5}>
+              <Typography flexBasis={0} flexGrow={1} variant='body' fontSize={15.5}color='primary' fontWeight='600' pr={0.5}>
                 95% of online pet recipes aren’t nutritionally balanced, we’re putting an end to them once and for all. 
               </Typography>
               <Button variant='contained' sx={{ flexGrow: 0.8, flexBasis: 0, borderRadius: 60, textTransform: 'capitalize', margin: 1, fontWeight: 600, fontFamily: 'Hellix', height: 56, }}>

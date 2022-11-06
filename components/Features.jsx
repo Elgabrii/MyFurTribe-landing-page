@@ -9,7 +9,7 @@ import TakeoutDiningIcon from '@mui/icons-material/TakeoutDining';
 import Image from 'next/image';
 const Features = () => {
   const theme = useTheme()
-  return <Box display='flex' width='100%' flexDirection='row' mt={theme.spacing(4)} pl={theme.spacing(10)}>
+  return <Box display='flex' width='100%' flexDirection='row' sx={{ position: 'relative', bottom: 50}} pl={theme.spacing(10)}>
     <Box flexGrow={3}>
       <Typography variant='h4' fontWeight='600' color={theme.palette.primary.main}>Get Access To <span style={{ color: 'black'}}>AI-Powered</span> Pet Nutrition</Typography>
       <Box p={1}>
@@ -45,8 +45,8 @@ const Features = () => {
         </Box>
       </Box>
     </Box>
-    <Box flexGrow={0} height='inherit' flexDirection='column'>
-      <Box width={445} height={250} sx={{ position: 'relative' }}>
+    <Box flexGrow={0} height='inherit' flexDirection='column' sx={{ position: 'relative', bottom: 100}}>
+      <Box width={534} height={300} sx={{ position: 'relative' }}>
         <Image src='/dog1.png' alt='dog-image' layout='fill' />
       </Box>
       <Box width={534} height={300} sx={{ position: 'relative' }}>

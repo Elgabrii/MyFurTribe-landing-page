@@ -44,9 +44,9 @@ const Tribe = () => (
         </Typography>
         <Box display='flex' justifyContent='space-around'>
           <Box flexBasis={0} flexGrow={1}> 
-            <Typography mt={3} mb={4} fontSize='48px' fontWeight='600' align='left'>
+            <Typography mt={3} mb={4} fontSize='3.1vw' fontWeight={600} align='left'>
               It’s never been easier to join the
-                <Typography pl={1} display='inline' fontSize='48px' fontWeight='600' color='primary'>
+                <Typography pl={1} display='inline' fontSize='3.1vw' fontWeight='600' color='primary'>
                    millions of pet parents that feed homemade  <br/>
                 </Typography>
                nation-wide 
@@ -61,35 +61,41 @@ const Tribe = () => (
                 textTransform: 'capitalize' 
               }}>Download The App</Button>
           </Box>
-          <Box display='flex' flexBasis={0} flexGrow={1}>
+          <Box display='flex' flexBasis={0} flexGrow={1} sx={{ position: 'relative', bottom: '90px'}}>
             <ImageContainer>
               <Image src='/twoiphonepets.png' layout='fill' className='image' alt='iphone' />
             </ImageContainer>
           </Box>
         </Box>
-      </Box>
-    </Sheet>
-      <Box display='flex' justifyContent='space-around' sx={{ background: '#161531'}} px={'90px'} pb={4}>
-        <Box flexBasis={0} flexGrow={1} sx={{ color: 'white' }}>
-          <Typography display='flex' flexDirection='column' fontSize='42px' fontWeight='600' variant='h4'> Homemade Feeding <br /> <Typography color='primary' fontSize='inherit' fontWeight='inherit'> Done Right.</Typography></Typography>
+        <Box display='flex' justifyContent='space-around' pb={4} sx={{ position: 'relative', bottom: 100}}>
+        <Box flexBasis={0} flexGrow={0.5} sx={{ color: 'white' }}>
+          <Typography display='flex' flexDirection='column' fontSize='3vw' fontWeight='600' variant='h4'> Homemade Feeding <br /> <Typography color='primary' fontSize='inherit' fontWeight='inherit'> Done Right.</Typography></Typography>
           <Box display='flex' flexDirection='row' width='100%' alignItems='flex-start'>
             <Box variant='p' fontWeight='500'>
               MyFurTribe’s “Nutrition Pro” is veterinary nutritionist approved. In short, any recipe that you create using our app will be as nutritionally complete & balanced as anything you are going to find at the pet store.
             </Box>
           </Box>
         </Box>
-        <Box flexGrow={0} display='flex'>
+        <Box flexBasis={0} flexGrow={1} display='flex'>
             <Box px={2}>
-              <Image width='224' height='445' src='/phone2.png' alt='iphone' />
+              <ImageContainer>
+                <Image className='image' layout='fill' src='/phone2.png' alt='iphone' />
+              </ImageContainer>
             </Box>
             <Box px={2}>
-              <Image width='224' height='445' src='/phone2.png' alt='iphone' />
+              <ImageContainer>
+                <Image className='image' layout='fill' src='/phone3.png' alt='iphone' />
+              </ImageContainer>
             </Box>
             <Box px={2}>
-              <Image width='224' height='445' src='/phone2.png' alt='iphone' />
+              <ImageContainer>
+                <Image className='image' layout='fill' src='/phone4.png' alt='iphone' />
+              </ImageContainer>
             </Box>
           </Box>
       </Box>
+      </Box>
+    </Sheet>
   </Base>
 )
 
