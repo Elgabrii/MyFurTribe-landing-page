@@ -14,7 +14,7 @@ const NavigationMenuMobile = () => {
   display='flex' 
   flexDirection='column' 
   height='100vh' 
-  sx={{ position: 'absolute', top: 60 , background: 'white', zIndex: 999 }}
+  sx={{ position: 'absolute', top: 60 , right: 0, background: 'white', zIndex: 999 }}
   >
     <NextLink href='/' passHref legacyBehavior>
       <Link component='text' fontWeight='500' align='center' py={2} underline='none' sx={{ cursor: 'pointer', color: theme?.palette?.primary?.main}} variant='body'>Pet Parent</Link>
@@ -47,7 +47,8 @@ const NavBarMobile = () => {
     px={1}
     sx={{
       borderBottom: '1px solid #1C1B3433',
-      position: 'relative',
+      position: 'fixed',
+      background: 'white',
       zIndex: 999,
     }}
   >
